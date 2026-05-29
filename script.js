@@ -64,7 +64,7 @@ function createCard(){
       <div>${icon}</div>
     </div>
 
-    <div class="progress-wrapper">
+    <div class="export-area">
 
       <div class="progress-bubble" style="left:${progress}%;">
         ${bubbleText}
@@ -76,6 +76,8 @@ function createCard(){
         </div>
 
       </div>
+
+    </div>
 
     </div>
 
@@ -104,11 +106,13 @@ function createCard(){
 
   card.querySelector(".download-btn").addEventListener("click", async () => {
 
-    const canvas = await html2canvas(card, {
+    const exportArea = card.querySelector(".export-area");
+
+    const canvas = await html2canvas(exportArea, {
       backgroundColor: "#ffffff",
       scale: 3,
       useCORS: true
-    });
+     });
 
     const link = document.createElement("a");
 
