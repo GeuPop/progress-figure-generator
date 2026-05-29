@@ -105,7 +105,9 @@ function createCard(){
   card.querySelector(".download-btn").addEventListener("click", async () => {
 
     const canvas = await html2canvas(card, {
-    backgroundColor: "#ffffff"
+      backgroundColor: "#ffffff",
+      scale: 3,
+      useCORS: true
     });
 
     const link = document.createElement("a");
