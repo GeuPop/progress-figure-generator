@@ -95,6 +95,7 @@ button:hover{
 
 .progress-wrapper{
   position:relative;
+  margin-top:40px;
 }
 
 .progress-bar{
@@ -114,14 +115,20 @@ button:hover{
 
 .progress-bubble{
   position:absolute;
-  top:-42px;
-  transform:translateX(-50%);
+  top:50%;
+  transform:translate(-50%, -50%);
   background:#00cfc8;
   color:white;
   padding:8px 14px;
   border-radius:999px;
   font-size:14px;
   font-weight:700;
+  z-index:10;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.15);
+
+  white-space:nowrap;
 }
 
 .card-buttons{
